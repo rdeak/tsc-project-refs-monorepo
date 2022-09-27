@@ -1,0 +1,12 @@
+name: Env test
+on:
+  workflow_dispatch:
+jobs:
+  aws:
+    runs-on: ubuntu-latest
+    env:
+      AWS_VER: ${{ aws --version }}
+    steps:
+      - name: Echo aws ver
+        run: |
+          echo $AWS_VER
