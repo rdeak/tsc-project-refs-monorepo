@@ -5,7 +5,7 @@ jobs:
   aws:
     runs-on: ubuntu-latest
     env:
-      AWS_VER: ${{ aws --version }}
+      AWS_VER: ${{ (aws --version) }}
     steps:
       - name: Echo aws ver
         run: |
